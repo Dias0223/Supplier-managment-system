@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fccbe59e-f792-4a55-90d9-1c51de4e6cdc">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+      return_order]]>
+	</queryString>
+	<field name="Return_Id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Receive_Id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pro_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sup_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date_Time" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="174" y="0" width="217" height="20" uuid="4bdee767-ef21-4672-917b-332c3269d57e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier Management System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="238" y="0" width="103" height="20" forecolor="#FF0000" uuid="8916c0ec-04c9-4bc5-96fe-9e6958192e4f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="81" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="69" width="555" height="1" uuid="8cf1f4b5-d690-4ba9-ae44-ca421abf69d0"/>
+			</line>
+			<staticText>
+				<reportElement x="18" y="49" width="65" height="20" uuid="36d4baf2-f1c7-4e33-a074-2711d5eebab6"/>
+				<text><![CDATA[Return ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="49" width="76" height="20" uuid="fe8885bb-418e-43bd-92fd-f73ca784b370"/>
+				<text><![CDATA[Receive ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="49" width="85" height="20" uuid="38d659a1-9542-464d-9205-566ef467fac5"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="49" width="88" height="20" uuid="1c7bd673-28b6-47f2-bf4a-4f21144a485a"/>
+				<text><![CDATA[Supplier Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="49" width="69" height="20" uuid="53ceec80-1bce-4e80-839b-5a5f412f5e4e"/>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="49" width="78" height="20" uuid="d022b6a0-2a36-4fbc-ac92-5c821dcbe963"/>
+				<text><![CDATA[Date & Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="18" y="0" width="65" height="20" uuid="6d394b86-3ec8-457c-8f43-c6503a7a0416"/>
+				<textFieldExpression><![CDATA[$F{Return_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="0" width="76" height="20" uuid="aaee2280-34fb-45c7-a6cb-1ab9f22e7d93"/>
+				<textFieldExpression><![CDATA[$F{Receive_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="85" height="20" uuid="0c0060a2-7ae3-420a-bea7-9c9c7e2eed43"/>
+				<textFieldExpression><![CDATA[$F{Pro_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="88" height="20" uuid="a1e2a8f8-3f01-4241-9d97-5000fdd940b7"/>
+				<textFieldExpression><![CDATA[$F{Sup_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="0" width="69" height="20" uuid="4fa96933-9a68-4542-afa5-74c6f9dc306d"/>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="0" width="78" height="20" uuid="5abc2cb0-ef70-4acd-b853-886e35073582"/>
+				<textFieldExpression><![CDATA[$F{Date_Time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="18" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="23" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

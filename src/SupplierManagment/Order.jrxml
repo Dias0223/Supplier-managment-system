@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="883c6ca2-619d-440b-b328-1e48b257a689">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     sup_order]]>
+	</queryString>
+	<field name="Order_Id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sup_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pro_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date_Time" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="186" y="0" width="218" height="20" uuid="bd0f0f0f-712f-450e-8f78-7918780a79bf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier Managment System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="245" y="0" width="103" height="20" forecolor="#FF0000" uuid="9be5d3e3-bed8-4f6a-9351-7bb3bc359978"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="88" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="77" width="555" height="1" uuid="abe17fe8-b710-4655-bdfb-8af2a7108e5a"/>
+			</line>
+			<staticText>
+				<reportElement x="15" y="57" width="68" height="20" uuid="8ea44a23-d31f-4cc8-ac47-4a787efb5ef4"/>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="57" width="73" height="20" uuid="5e2ab6b6-4601-4cb4-b523-6b591f0408bf"/>
+				<text><![CDATA[Supplier Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="57" width="82" height="20" uuid="b4708f77-b4d0-4a6b-aad3-48a27d18b53e"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="57" width="79" height="20" uuid="c08ba099-e65a-4c34-b884-e6ddc0ad0619"/>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="58" width="81" height="20" uuid="6e15492d-79a9-4755-afd2-8434f37ad60e"/>
+				<text><![CDATA[Date & Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="26" y="0" width="70" height="20" uuid="69055229-9d03-4348-90ac-588ee5981a0b"/>
+				<textFieldExpression><![CDATA[$F{Order_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="75" height="20" uuid="25f91601-3b46-4c47-ae51-6e632c676e23"/>
+				<textFieldExpression><![CDATA[$F{Sup_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="0" width="82" height="20" uuid="f879f48d-cbd7-4f99-b235-e16269a20e12"/>
+				<textFieldExpression><![CDATA[$F{Pro_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="0" width="79" height="20" uuid="4b00c050-0626-46aa-b0e2-17110a9c3793"/>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="0" width="81" height="20" uuid="6228c952-26fc-4d82-86b5-0c775105c646"/>
+				<textFieldExpression><![CDATA[$F{Date_Time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
